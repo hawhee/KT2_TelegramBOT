@@ -16,7 +16,7 @@ def start_message(message):
 @bot.message_handler(content_types=['text'])
 def echo(message):
     email = message.text
-    result = str(pwned(hibp_key).getAllBreachesForAccount(str(email))))
+    result = str(pypwned.pwned(hibp_key).getAllBreachesForAccount(str(email))))
     bot.send_message(message.chat.id, result)
 
 
